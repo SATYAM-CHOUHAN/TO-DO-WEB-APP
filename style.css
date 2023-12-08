@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    max-height: max-content;
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #0015ff, #7700fa, #a700f5, #cc00f0, #eb12eb);
+    padding: 10px;   
+}
+
+.to-do-app{
+    width: 100%;
+    max-width: 540px;
+    border-radius: 30px;
+    background-color: #ffff;
+    margin: 100px auto 20px;
+    padding: 20px 30px 70px;
+}
+.to-do-app h2{
+    color: #072C65;
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 30px;
+}
+
+.to-do-app img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.text-box{
+    background-color: #edeef0;
+    border-radius: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.text-box input{
+    padding-left: 30px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.text-box button{
+    padding: 0px 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #ff5945;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.to-do-app ul{
+    margin-top: 30px;
+} 
+ul li{
+    list-style: none;
+    padding: 12px 10px 12px 45px;
+    user-select: none;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before{
+    content: '';
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+}
+
+.checked {
+    color: #6b6b6b;
+    text-decoration: line-through;
+}
+
+.checked::before{
+    background-image: url(images/checked.png);
+}
+
+ul li span{
+    font-size: 20px;
+    padding: 4px 10px;
+    border-radius: 100%;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    right: 5px;
+    transform: rotate(45deg)
+}
+ul li span:hover{
+    background-color: #edeef0;
+}
